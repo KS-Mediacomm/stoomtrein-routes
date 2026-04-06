@@ -24,12 +24,13 @@ export function parseGpx(gpxString: string): GpxTrack {
 
   if (!feature) throw new Error('No track found in GPX file')
 
+  const geom = feature.geometry as { type: string; coordinates: number[][] | number[][][] }
   let coords: number[][]
-  if (feature.geometry.type === 'LineString') {
-    coords = feature.geometry.coordinates as number[][]
+  if (geom.type === 'LineString') {
+    coords = geom.coordinates as number[][]
   } else {
     // MultiLineString — flatten segments
-    coords = (feature.geometry.coordinates as number[][][]).flat()
+    coords = (geom.coordinates as number[][][]).flat()
   }
 
   const coordinates: [number, number][] = coords.map(([lng, lat]) => [lng, lat])

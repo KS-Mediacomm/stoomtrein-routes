@@ -51,11 +51,9 @@ import { ref, computed, onMounted } from 'vue'
 import { RouterLink } from 'vue-router'
 import { Upload } from 'lucide-vue-next'
 import { useRoutesStore } from '@/stores/routes'
-import { useReviewsStore } from '@/stores/reviews'
 import RouteCard from '@/components/RouteCard.vue'
 
 const routesStore = useRoutesStore()
-const reviewsStore = useReviewsStore()
 const filterDifficulty = ref('')
 const sortBy = ref('date')
 

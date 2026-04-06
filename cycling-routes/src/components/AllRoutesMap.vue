@@ -13,7 +13,7 @@
         layer-type="base"
       />
 
-      <template v-for="(item, idx) in tracksWithColors" :key="item.route.id">
+      <template v-for="item in tracksWithColors" :key="item.route.id">
         <LPolyline
           :lat-lngs="item.latLngs"
           :color="item.color"
