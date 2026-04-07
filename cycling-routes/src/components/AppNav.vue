@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-14">
       <RouterLink to="/" class="flex items-center gap-2 font-bold text-lg text-gray-900">
         <Bike class="w-5 h-5 text-emerald-600" />
-        CycleRoutes
+        WTC STOOMTREIN
       </RouterLink>
 
       <div class="flex items-center gap-1">
